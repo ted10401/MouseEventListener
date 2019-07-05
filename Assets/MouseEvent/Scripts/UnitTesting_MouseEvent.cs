@@ -7,8 +7,8 @@ public class UnitTesting_MouseEvent : MonoBehaviour
     {
         gameObject
             .AddMouseEnterAction(OnMouseEnterAction)
-            .AddMouseExitAction(OnMouseExitAction)
             .AddMouseOverAction(OnMouseOverAction)
+            .AddMouseExitAction(OnMouseExitAction)
             .AddMouseDownAction(0, OnLeftMouseDownAction)
             .AddMouseDownAction(1, OnRightMouseDownAction)
             .AddMouseDownAction(2, OnMiddleMouseDownAction)

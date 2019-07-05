@@ -31,6 +31,36 @@ namespace TEDCore.MouseEvent
             return Get(gameObject).ClearMouseEnterAction();
         }
 
+        public static MouseEventListener AddMouseOverAction(this GameObject gameObject, Action action)
+        {
+            return Get(gameObject).AddMouseOverAction(action);
+        }
+
+        public static MouseEventListener RemoveMouseOverAction(this GameObject gameObject, Action action)
+        {
+            return Get(gameObject).RemoveMouseOverAction(action);
+        }
+
+        public static MouseEventListener ClearMouseOverAction(this GameObject gameObject)
+        {
+            return Get(gameObject).ClearMouseOverAction();
+        }
+
+        public static MouseEventListener AddMouseExitAction(this GameObject gameObject, Action action)
+        {
+            return Get(gameObject).AddMouseExitAction(action);
+        }
+
+        public static MouseEventListener RemoveMouseExitAction(this GameObject gameObject, Action action)
+        {
+            return Get(gameObject).RemoveMouseExitAction(action);
+        }
+
+        public static MouseEventListener ClearMouseExitAction(this GameObject gameObject)
+        {
+            return Get(gameObject).ClearMouseExitAction();
+        }
+
         public static MouseEventListener AddMouseDownAction(this GameObject gameObject, int mouseButton, Action action)
         {
             return Get(gameObject).AddMouseDownAction(mouseButton, action);

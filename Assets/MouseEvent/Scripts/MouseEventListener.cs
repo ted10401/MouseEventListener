@@ -8,8 +8,8 @@ namespace TEDCore.MouseEvent
         private readonly int[] MOUSE_BUTTON = { 0, 1, 2 };
 
         private Action m_onMouseEnter;
-        private Action m_onMouseExit;
         private Action m_onMouseOver;
+        private Action m_onMouseExit;
         private Action[] m_onMouseDowns = new Action[3];
         private Action[] m_onMouseUps = new Action[3];
         private Action[] m_onMouseDrag = new Action[3];
@@ -90,24 +90,6 @@ namespace TEDCore.MouseEvent
             return this;
         }
 
-        public MouseEventListener AddMouseExitAction(Action action)
-        {
-            m_onMouseExit += action;
-            return this;
-        }
-
-        public MouseEventListener RemoveMouseExitAction(Action action)
-        {
-            m_onMouseExit -= action;
-            return this;
-        }
-
-        public MouseEventListener ClearMouseExitAction()
-        {
-            m_onMouseExit = null;
-            return this;
-        }
-
         public MouseEventListener AddMouseOverAction(Action action)
         {
             m_onMouseOver += action;
@@ -123,6 +105,24 @@ namespace TEDCore.MouseEvent
         public MouseEventListener ClearMouseOverAction()
         {
             m_onMouseOver = null;
+            return this;
+        }
+
+        public MouseEventListener AddMouseExitAction(Action action)
+        {
+            m_onMouseExit += action;
+            return this;
+        }
+
+        public MouseEventListener RemoveMouseExitAction(Action action)
+        {
+            m_onMouseExit -= action;
+            return this;
+        }
+
+        public MouseEventListener ClearMouseExitAction()
+        {
+            m_onMouseExit = null;
             return this;
         }
 
