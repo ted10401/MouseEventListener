@@ -8,6 +8,13 @@ public class UnitTesting_MouseEvent : MonoBehaviour
         gameObject
             .AddMouseEnterAction(OnMouseEnterAction)
             .AddMouseExitAction(OnMouseExitAction)
+            .AddMouseOverAction(OnMouseOverAction)
+            .AddMouseDownAction(0, OnLeftMouseDownAction)
+            .AddMouseDownAction(1, OnRightMouseDownAction)
+            .AddMouseDownAction(2, OnMiddleMouseDownAction)
+            .AddMouseUpAction(0, OnLeftMouseUpAction)
+            .AddMouseUpAction(1, OnRightMouseUpAction)
+            .AddMouseUpAction(2, OnMiddleMouseUpAction)
             .AddMouseDragAction(0, OnLeftMouseDragAction)
             .AddMouseDragAction(1, OnRightMouseDragAction)
             .AddMouseDragAction(2, OnMiddleMouseDragAction)
@@ -27,6 +34,41 @@ public class UnitTesting_MouseEvent : MonoBehaviour
     private void OnMouseExitAction()
     {
         Debug.Log("Mouse Exit = " + name);
+    }
+
+    private void OnMouseOverAction()
+    {
+        Debug.Log("Mouse Over = " + name);
+    }
+
+    private void OnLeftMouseDownAction()
+    {
+        Debug.Log("Left Mouse Down = " + name);
+    }
+
+    private void OnRightMouseDownAction()
+    {
+        Debug.Log("Right Mouse Down = " + name);
+    }
+
+    private void OnMiddleMouseDownAction()
+    {
+        Debug.Log("Middle Mouse Down = " + name);
+    }
+
+    private void OnLeftMouseUpAction()
+    {
+        Debug.Log("Left Mouse Up = " + name);
+    }
+
+    private void OnRightMouseUpAction()
+    {
+        Debug.Log("Right Mouse Up = " + name);
+    }
+
+    private void OnMiddleMouseUpAction()
+    {
+        Debug.Log("Middle Mouse Up = " + name);
     }
 
     private void OnLeftMouseDragAction()

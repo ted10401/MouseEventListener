@@ -21,19 +21,9 @@ namespace TEDCore.MouseEvent
             return Get(gameObject).AddMouseEnterAction(action);
         }
 
-        public static MouseEventListener AddMouseEnterAction(this MouseEventListener mouseEventListener, Action action)
-        {
-            return mouseEventListener.AddMouseEnterAction(action);
-        }
-
         public static MouseEventListener RemoveMouseEnterAction(this GameObject gameObject, Action action)
         {
             return Get(gameObject).RemoveMouseEnterAction(action);
-        }
-
-        public static MouseEventListener RemoveMouseEnterAction(this MouseEventListener mouseEventListener, Action action)
-        {
-            return mouseEventListener.RemoveMouseEnterAction(action);
         }
 
         public static MouseEventListener ClearMouseEnterAction(this GameObject gameObject)
@@ -41,9 +31,34 @@ namespace TEDCore.MouseEvent
             return Get(gameObject).ClearMouseEnterAction();
         }
 
-        public static MouseEventListener ClearMouseEnterAction(this MouseEventListener mouseEventListener)
+        public static MouseEventListener AddMouseDownAction(this GameObject gameObject, int mouseButton, Action action)
         {
-            return mouseEventListener.ClearMouseEnterAction();
+            return Get(gameObject).AddMouseDownAction(mouseButton, action);
+        }
+
+        public static MouseEventListener RemoveMouseDownAction(this GameObject gameObject, int mouseButton, Action action)
+        {
+            return Get(gameObject).RemoveMouseDownAction(mouseButton, action);
+        }
+
+        public static MouseEventListener ClearMouseDownAction(this GameObject gameObject, int mouseButton)
+        {
+            return Get(gameObject).ClearMouseDownAction(mouseButton);
+        }
+
+        public static MouseEventListener AddMouseUpAction(this GameObject gameObject, int mouseButton, Action action)
+        {
+            return Get(gameObject).AddMouseUpAction(mouseButton, action);
+        }
+
+        public static MouseEventListener RemoveMouseUpAction(this GameObject gameObject, int mouseButton, Action action)
+        {
+            return Get(gameObject).RemoveMouseUpAction(mouseButton, action);
+        }
+
+        public static MouseEventListener ClearMouseUpAction(this GameObject gameObject, int mouseButton)
+        {
+            return Get(gameObject).ClearMouseUpAction(mouseButton);
         }
 
         public static MouseEventListener AddMouseDragAction(this GameObject gameObject, int mouseButton, Action action)
@@ -51,19 +66,9 @@ namespace TEDCore.MouseEvent
             return Get(gameObject).AddMouseDragAction(mouseButton, action);
         }
 
-        public static MouseEventListener AddMouseDragAction(this MouseEventListener mouseEventListener, int mouseButton, Action action)
-        {
-            return mouseEventListener.AddMouseDragAction(mouseButton, action);
-        }
-
         public static MouseEventListener RemoveMouseDragAction(this GameObject gameObject, int mouseButton, Action action)
         {
             return Get(gameObject).RemoveMouseDragAction(mouseButton, action);
-        }
-
-        public static MouseEventListener RemoveMouseDragAction(this MouseEventListener mouseEventListener, int mouseButton, Action action)
-        {
-            return mouseEventListener.RemoveMouseDragAction(mouseButton, action);
         }
 
         public static MouseEventListener ClearMouseDragAction(this GameObject gameObject, int mouseButton)
@@ -71,19 +76,9 @@ namespace TEDCore.MouseEvent
             return Get(gameObject).ClearMouseDragAction(mouseButton);
         }
 
-        public static MouseEventListener ClearMouseDragAction(this MouseEventListener mouseEventListener, int mouseButton)
-        {
-            return mouseEventListener.ClearMouseDragAction(mouseButton);
-        }
-
         public static MouseEventListener AddMouseClickAction(this GameObject gameObject, int mouseButton, Action action)
         {
             return Get(gameObject).AddMouseClickAction(mouseButton, action);
-        }
-
-        public static MouseEventListener AddMouseClickAction(this MouseEventListener mouseEventListener, int mouseButton, Action action)
-        {
-            return mouseEventListener.AddMouseClickAction(mouseButton, action);
         }
 
         public static MouseEventListener RemoveMouseClickAction(this GameObject gameObject, int mouseButton, Action action)
@@ -91,19 +86,9 @@ namespace TEDCore.MouseEvent
             return Get(gameObject).RemoveMouseClickAction(mouseButton, action);
         }
 
-        public static MouseEventListener RemoveMouseClickAction(this MouseEventListener mouseEventListener, int mouseButton, Action action)
-        {
-            return mouseEventListener.RemoveMouseClickAction(mouseButton, action);
-        }
-
         public static MouseEventListener ClearMouseClickAction(this GameObject gameObject, int mouseButton)
         {
             return Get(gameObject).ClearMouseClickAction(mouseButton);
-        }
-
-        public static MouseEventListener ClearMouseClickAction(this MouseEventListener mouseEventListener, int mouseButton)
-        {
-            return mouseEventListener.ClearMouseClickAction(mouseButton);
         }
 
         public static MouseEventListener AddMouseDoubleClickAction(this GameObject gameObject, int mouseButton, Action action)
@@ -111,29 +96,14 @@ namespace TEDCore.MouseEvent
             return Get(gameObject).AddMouseDoubleClickAction(mouseButton, action);
         }
 
-        public static MouseEventListener AddMouseDoubleClickAction(this MouseEventListener mouseEventListener, int mouseButton, Action action)
-        {
-            return mouseEventListener.AddMouseDoubleClickAction(mouseButton, action);
-        }
-
         public static MouseEventListener RemoveMouseDoubleClickAction(this GameObject gameObject, int mouseButton, Action action)
         {
             return Get(gameObject).RemoveMouseDoubleClickAction(mouseButton, action);
         }
 
-        public static MouseEventListener RemoveMouseDoubleClickAction(this MouseEventListener mouseEventListener, int mouseButton, Action action)
-        {
-            return mouseEventListener.RemoveMouseDoubleClickAction(mouseButton, action);
-        }
-
         public static MouseEventListener ClearMouseDoubleClickAction(this GameObject gameObject, int mouseButton)
         {
             return Get(gameObject).ClearMouseDoubleClickAction(mouseButton);
-        }
-
-        public static MouseEventListener ClearMouseDoubleClickAction(this MouseEventListener mouseEventListener, int mouseButton)
-        {
-            return mouseEventListener.ClearMouseDoubleClickAction(mouseButton);
         }
     }
 }

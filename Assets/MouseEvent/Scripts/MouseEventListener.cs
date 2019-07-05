@@ -9,6 +9,9 @@ namespace TEDCore.MouseEvent
 
         private Action m_onMouseEnter;
         private Action m_onMouseExit;
+        private Action m_onMouseOver;
+        private Action[] m_onMouseDowns = new Action[3];
+        private Action[] m_onMouseUps = new Action[3];
         private Action[] m_onMouseDrag = new Action[3];
         private Action[] m_onMouseClicks = new Action[3];
         private Action[] m_onMouseDoubleClicks = new Action[3];
@@ -37,10 +40,13 @@ namespace TEDCore.MouseEvent
 
         private void OnMouseOver()
         {
+            m_onMouseOver?.Invoke();
+
             for (int i = 0; i < MOUSE_BUTTON.Length; i++)
             {
                 if (Input.GetMouseButtonDown(MOUSE_BUTTON[i]))
                 {
+                    m_onMouseDowns[i]?.Invoke();
                     MouseEventManager.Instance.OnMouseDown(this);
                     break;
                 }
@@ -59,6 +65,7 @@ namespace TEDCore.MouseEvent
             {
                 if (Input.GetMouseButtonUp(MOUSE_BUTTON[i]))
                 {
+                    m_onMouseUps[i]?.Invoke();
                     MouseEventManager.Instance.OnMouseUp(this);
                     break;
                 }
@@ -98,6 +105,60 @@ namespace TEDCore.MouseEvent
         public MouseEventListener ClearMouseExitAction()
         {
             m_onMouseExit = null;
+            return this;
+        }
+
+        public MouseEventListener AddMouseOverAction(Action action)
+        {
+            m_onMouseOver += action;
+            return this;
+        }
+
+        public MouseEventListener RemoveMouseOverAction(Action action)
+        {
+            m_onMouseOver -= action;
+            return this;
+        }
+
+        public MouseEventListener ClearMouseOverAction()
+        {
+            m_onMouseOver = null;
+            return this;
+        }
+
+        public MouseEventListener AddMouseDownAction(int mouseButton, Action action)
+        {
+            m_onMouseDowns[mouseButton] += action;
+            return this;
+        }
+
+        public MouseEventListener RemoveMouseDownAction(int mouseButton, Action action)
+        {
+            m_onMouseDowns[mouseButton] -= action;
+            return this;
+        }
+
+        public MouseEventListener ClearMouseDownAction(int mouseButton)
+        {
+            m_onMouseDowns[mouseButton] = null;
+            return this;
+        }
+
+        public MouseEventListener AddMouseUpAction(int mouseButton, Action action)
+        {
+            m_onMouseUps[mouseButton] += action;
+            return this;
+        }
+
+        public MouseEventListener RemoveMouseUpAction(int mouseButton, Action action)
+        {
+            m_onMouseUps[mouseButton] -= action;
+            return this;
+        }
+
+        public MouseEventListener ClearMouseUpAction(int mouseButton)
+        {
+            m_onMouseUps[mouseButton] = null;
             return this;
         }
 
