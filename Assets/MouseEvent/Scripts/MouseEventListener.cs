@@ -72,145 +72,145 @@ namespace TEDCore.MouseEvent
             }
         }
 
-        public MouseEventListener AddMouseEnterAction(Action action)
+        public IMouseEventListener AddMouseEnterAction(Action action)
         {
             m_onMouseEnter += action;
             return this;
         }
 
-        public MouseEventListener RemoveMouseEnterAction(Action action)
+        public IMouseEventListener RemoveMouseEnterAction(Action action)
         {
             m_onMouseEnter -= action;
             return this;
         }
 
-        public MouseEventListener ClearMouseEnterAction()
+        public IMouseEventListener ClearMouseEnterAction()
         {
             m_onMouseEnter = null;
             return this;
         }
 
-        public MouseEventListener AddMouseOverAction(Action action)
+        public IMouseEventListener AddMouseOverAction(Action action)
         {
             m_onMouseOver += action;
             return this;
         }
 
-        public MouseEventListener RemoveMouseOverAction(Action action)
+        public IMouseEventListener RemoveMouseOverAction(Action action)
         {
             m_onMouseOver -= action;
             return this;
         }
 
-        public MouseEventListener ClearMouseOverAction()
+        public IMouseEventListener ClearMouseOverAction()
         {
             m_onMouseOver = null;
             return this;
         }
 
-        public MouseEventListener AddMouseExitAction(Action action)
+        public IMouseEventListener AddMouseExitAction(Action action)
         {
             m_onMouseExit += action;
             return this;
         }
 
-        public MouseEventListener RemoveMouseExitAction(Action action)
+        public IMouseEventListener RemoveMouseExitAction(Action action)
         {
             m_onMouseExit -= action;
             return this;
         }
 
-        public MouseEventListener ClearMouseExitAction()
+        public IMouseEventListener ClearMouseExitAction()
         {
             m_onMouseExit = null;
             return this;
         }
 
-        public MouseEventListener AddMouseDownAction(int mouseButton, Action action)
+        public IMouseEventListener AddMouseDownAction(int mouseButton, Action action)
         {
             m_onMouseDowns[mouseButton] += action;
             return this;
         }
 
-        public MouseEventListener RemoveMouseDownAction(int mouseButton, Action action)
+        public IMouseEventListener RemoveMouseDownAction(int mouseButton, Action action)
         {
             m_onMouseDowns[mouseButton] -= action;
             return this;
         }
 
-        public MouseEventListener ClearMouseDownAction(int mouseButton)
+        public IMouseEventListener ClearMouseDownAction(int mouseButton)
         {
             m_onMouseDowns[mouseButton] = null;
             return this;
         }
 
-        public MouseEventListener AddMouseUpAction(int mouseButton, Action action)
+        public IMouseEventListener AddMouseUpAction(int mouseButton, Action action)
         {
             m_onMouseUps[mouseButton] += action;
             return this;
         }
 
-        public MouseEventListener RemoveMouseUpAction(int mouseButton, Action action)
+        public IMouseEventListener RemoveMouseUpAction(int mouseButton, Action action)
         {
             m_onMouseUps[mouseButton] -= action;
             return this;
         }
 
-        public MouseEventListener ClearMouseUpAction(int mouseButton)
+        public IMouseEventListener ClearMouseUpAction(int mouseButton)
         {
             m_onMouseUps[mouseButton] = null;
             return this;
         }
 
-        public MouseEventListener AddMouseDragAction(int mouseButton, Action action)
+        public IMouseEventListener AddMouseDragAction(int mouseButton, Action action)
         {
             m_onMouseDrag[mouseButton] += action;
             return this;
         }
 
-        public MouseEventListener RemoveMouseDragAction(int mouseButton, Action action)
+        public IMouseEventListener RemoveMouseDragAction(int mouseButton, Action action)
         {
             m_onMouseDrag[mouseButton] -= action;
             return this;
         }
 
-        public MouseEventListener ClearMouseDragAction(int mouseButton)
+        public IMouseEventListener ClearMouseDragAction(int mouseButton)
         {
             m_onMouseDrag[mouseButton] = null;
             return this;
         }
 
-        public MouseEventListener AddMouseClickAction(int mouseButton, Action action)
+        public IMouseEventListener AddMouseClickAction(int mouseButton, Action action)
         {
             m_onMouseClicks[mouseButton] += action;
             return this;
         }
 
-        public MouseEventListener RemoveMouseClickAction(int mouseButton, Action action)
+        public IMouseEventListener RemoveMouseClickAction(int mouseButton, Action action)
         {
             m_onMouseClicks[mouseButton] -= action;
             return this;
         }
 
-        public MouseEventListener ClearMouseClickAction(int mouseButton)
+        public IMouseEventListener ClearMouseClickAction(int mouseButton)
         {
             m_onMouseClicks[mouseButton] = null;
             return this;
         }
 
-        public MouseEventListener AddMouseDoubleClickAction(int mouseButton, Action action)
+        public IMouseEventListener AddMouseDoubleClickAction(int mouseButton, Action action)
         {
             m_onMouseDoubleClicks[mouseButton] += action;
             return this;
         }
 
-        public MouseEventListener RemoveMouseDoubleClickAction(int mouseButton, Action action)
+        public IMouseEventListener RemoveMouseDoubleClickAction(int mouseButton, Action action)
         {
             m_onMouseDoubleClicks[mouseButton] -= action;
             return this;
         }
 
-        public MouseEventListener ClearMouseDoubleClickAction(int mouseButton)
+        public IMouseEventListener ClearMouseDoubleClickAction(int mouseButton)
         {
             m_onMouseDoubleClicks[mouseButton] = null;
             return this;
